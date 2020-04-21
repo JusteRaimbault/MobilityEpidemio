@@ -1,0 +1,142 @@
+
+\documentclass[10pt]{article}
+
+
+\begin{document}
+	
+Ramp https://epcced.github.io/ramp/
+
+
+Imperial team: https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/news--wuhan-coronavirus/
+
+Description of the model in SI of \cite{ferguson2005strategies}
+\url{https://static-content.springer.com/esm/art\%3A10.1038\%2Fnature04017/MediaObjects/41586_2005_BFnature04017_MOESM1_ESM.pdf}
+
+
+Governement response: https://www.bsg.ox.ac.uk/research/research-projects/oxford-covid-19-government-response-tracker
+
+
+Montpelier http://alizon.ouvaton.org/Rapport3_Modele.html
+
+Italy group https://covid19mm.github.io/in-progress/2020/03/25/second-report.html
+
+
+https://covid-19-risk.github.io/map/model.pdf // 
+https://www.medrxiv.org/content/10.1101/2020.03.21.20040022v1
+
+Review IBM https://www.innovationinfo.org/articles/JBRR-102.pdf
+
+Coupling reaction-diffusion and metapopulation models https://www.nature.com/articles/nphys560
+
+
+Global forecasts https://epiforecasts.io/covid/posts/global/
+
+Ifisc mobile phone https://analytics.ifisc.uib-csic.es/es/respuesta-covid-19/
+
+Gleam model http://www.gleamviz.org/model/
+
+Multivac https://covid19.multivacplatform.org/
+
+\cite{adam2020special}
+
+\cite{squazzoni2020} JASSS: abm, policy
+
+
+Imperial model https://github.com/ImperialCollegeLondon/covid19model (refactored in R?)
+
+\section{Literature}
+
+\cite{Heesterbeekaaa4339} review
+
+\cite{Klepac2020.02.16.20023754} \cite{gog2020you} BBC Pandemic project: user-based data of contact patterns
+
+\cite{mossong2008social} empirical estimation of contacts
+
+
+\section{Projects}
+
+Casa kaggle
+
+https://github.com/MeldaS/CASA-COVID
+
+Sarah mapping https://github.com/swise5/KatMapBRC
+
+Covprehension
+
+https://covprehension.org/
+
+https://github.com/covprehension/CoVprehension/blob/master/posts/index.html
+
+
+\section{Data}
+
+Real-time data
+
+https://github.com/beoutbreakprepared/nCoV2019
+https://www.nature.com/articles/s41597-020-0448-0.pdf
+: seems crappy
+
+ECDC daily data https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide
+Pb: country level
+
+	
+	
+\section{Individual-based modeling}
+
+\cite{willem2017lessons} systematic review IBM
+
+\cite{kuylen2017social} in the IBM, estimation of $R_0$ as a function of micro transmission proba.
+
+\cite{delamater2019complexity} difficulty to estimate the basic reproduction number; to not be confused with reproduction number (on full population).
+
+\cite{mclure2020some} simple formulas for reproduction number in SIS, SIR, with reservoir, demographics, and imported cases.
+
+\cite{hunter2018open} use $R_0$, proba of contact estimated by running the model, disease duration, to determine micro transmission proba.
+
+\cite{willem2015optimizing} large scale optim ABM  
+
+\cite{kisjes2014individual} IBM no vaccination
+	
+Rq: why focus on $R_0$ and not statistical distribution (superspreader etc.: what is the shape of the distrib?)
+
+\cite{chao2010flute} linear relation $R_0$/proba transmission (rescale contact proba matrix between groups)
+	
+\cite{bacaer2011parametre} definition de $R_0$ comme rayon spectral d'un operateur
+
+\cite{bonte2011modelisation} couplage modele de controle, de prise de decision, et systeme under controle. triade de Minski: // perspectivism?
+	
+\section{Urban Density}
+
+
+\cite{2020arXiv200401248H} no effect of city size on growth rates in US
+	
+\cite{angel2020coronavirus} effect of population on number of deaths, no significant effect of density
+
+\cite{tarwater2001effects} theoretical effect of pop density in a lattice model	
+
+	
+	
+\section{Mobility network}
+	
+Data:
+
+\begin{itemize}
+	\item mobility flow on 8h slice
+	\item unique O/D using from and to of linestrings
+\end{itemize}
+
+
+
+
+
+
+
+	
+	
+	
+	
+\bibliographystyle{apalike}
+\bibliography{biblio.bib}
+	
+	
+\end{document}
