@@ -1,10 +1,11 @@
 
 \documentclass[10pt]{article}
 
+\usepackage{hyperref}
+\usepackage[margin=2cm]{geometry}
 
 \begin{document}
 	
-Ramp https://epcced.github.io/ramp/
 
 
 Imperial team: https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/news--wuhan-coronavirus/
@@ -16,9 +17,9 @@ Description of the model in SI of \cite{ferguson2005strategies}
 Governement response: https://www.bsg.ox.ac.uk/research/research-projects/oxford-covid-19-government-response-tracker
 
 
-Montpelier http://alizon.ouvaton.org/Rapport3_Modele.html
+Montpelier http://alizon.ouvaton.org/Rapport3{\_}Modele.html
 
-Italy group https://covid19mm.github.io/in-progress/2020/03/25/second-report.html
+
 
 
 https://covid-19-risk.github.io/map/model.pdf // 
@@ -44,44 +45,77 @@ Multivac https://covid19.multivacplatform.org/
 
 Imperial model https://github.com/ImperialCollegeLondon/covid19model (refactored in R?)
 
+INSERM https://www.epicx-lab.com/covid-19.html
+
+
 \section{Literature}
+
+\subsection{General}
+
 
 \cite{Heesterbeekaaa4339} review
 
-\cite{Klepac2020.02.16.20023754} \cite{gog2020you} BBC Pandemic project: user-based data of contact patterns
+\cite{Klepac2020.02.16.20023754} \cite{gog2020you} BBC Pandemic project: user-based data of contact patterns; \cite{Kucharski2020.04.23.20077024} effect of isolation/contact tracing
 
 \cite{mossong2008social} empirical estimation of contacts
 
 
+\subsection{Covid}
+
+\cite{2020arXiv200409554R} pedestrian dynamics coupled with SI
+
+\cite{2020arXiv200408653S} toy network model (Erdos-Renyi, random interactions) distinguishing poor/non-poor
+
+\cite{Dowd9696} role of demographic structure
+
 \section{Projects}
 
-Casa kaggle
+\begin{itemize}
+	\item RAMP call in UK \url{https://epcced.github.io/ramp/}
+	\item CASA kaggle \url{https://github.com/MeldaS/CASA-COVID}
+	\item Sarah mapping project \url{https://github.com/swise5/KatMapBRC}
+	\item Covprehension \url{https://covprehension.org/} 
+\end{itemize}
 
-https://github.com/MeldaS/CASA-COVID
 
-Sarah mapping https://github.com/swise5/KatMapBRC
 
-Covprehension
 
-https://covprehension.org/
+
+
+
+
 
 https://github.com/covprehension/CoVprehension/blob/master/posts/index.html
 
+Overmortality in France \url{https://mtmx.github.io/blog/deces_pandemie/}
+
+Imperial model https://github.com/mrc-ide/covid-sim
+
+Leeds questionaire transportation % failed 18/05 https://leedsubs.eu.qualtrics.com/jfe/form/SV_8q2czztoB9jpwfX
+
+Comment Ferguson model https://lockdownsceptics.org/code-review-of-fergusons-model/
 
 \section{Data}
 
 Real-time data
 
-https://github.com/beoutbreakprepared/nCoV2019
-https://www.nature.com/articles/s41597-020-0448-0.pdf
-: seems crappy
+\begin{itemize}
+	\item Worldwide cases \cite{xu2020epidemiological} \url{https://github.com/beoutbreakprepared/nCoV2019} (missing half of cases, no proper outcome)
+	\item ECDC: European Center for Disease Control, daily data \url{https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide} (at the country level)
+	\item For the US: by state, including testing rate: Covid tracking project \url{https://covidtracking.com/data}
+	\item Italy: province \url{https://github.com/pcm-dpc/COVID-19/blob/master/dati-province/dpc-covid19-ita-province-20200224.csv}
+	\item Worldwide and US \url{https://github.com/CSSEGISandData/COVID-19/blob/master/csse\_covid\_19\_data/csse\_covid\_19\_time\_series/time\_series\_covid19\_deaths\_global.csv} ; data of interactive dashboard \cite{dong2020interactive}
+	\item European datasets \url{https://www.europeandataportal.eu/en/covid-19/datasets}
+	\item French data (d{\'e}partements) \url{https://www.data.gouv.fr/fr/datasets/donnees-hospitalieres-relatives-a-lepidemie-de-covid-19/}
+	\item UK: Local authority mortality data from ONS \url{https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/causesofdeath/datasets/deathregistrationsandoccurrencesbylocalauthorityandhealthboard}
+\end{itemize}
 
-ECDC daily data https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide
-Pb: country level
 
 	
 	
 \section{Individual-based modeling}
+
+\subsection{Scales and parameters}
 
 \cite{willem2017lessons} systematic review IBM
 
@@ -104,6 +138,17 @@ Rq: why focus on $R_0$ and not statistical distribution (superspreader etc.: wha
 \cite{bacaer2011parametre} definition de $R_0$ comme rayon spectral d'un operateur
 
 \cite{bonte2011modelisation} couplage modele de controle, de prise de decision, et systeme under controle. triade de Minski: // perspectivism?
+
+
+
+
+\section{Transportation modeling}
+
+\cite{11303_10945} using Matsim for a microscopic SIR in Berlin
+
+
+	
+
 	
 \section{Urban Density}
 
@@ -114,9 +159,34 @@ Rq: why focus on $R_0$ and not statistical distribution (superspreader etc.: wha
 
 \cite{tarwater2001effects} theoretical effect of pop density in a lattice model	
 
+\cite{White2020.04.14.20065318} effect of population density on doubling times (US States)
 	
+\cite{Rader2020.04.15.20064980} impact of population density on total impact of the epidemics; model trained on Chinese cities (includes humidity), extrapolateed to 380 global cities (GHSL).
+
+\cite{2020arXiv200400110M} association between GDP/latitude and cases? doubtful, as no dynamics is furthermore included
+
+\cite{2020arXiv200412994B} bias when aggregating
+
+
 	
 \section{Mobility network}
+	
+%Italy group https://covid19mm.github.io/in-progress/2020/03/25/second-report.html
+\cite{Pepe2020.03.22.20039933} Indicators: total trips, radius of gyration, degree of user proximity network. Very precise data (up to 10m).
+
+% Matsim group https://matsim-vsp.github.io/covid-sim/
+% https://github.com/matsim-org/matsim-episim
+
+
+% ETH: mobility in Switzerland
+% https://ivtmobis.ethz.ch/mobis/covid19/reports/latest
+
+\cite{jia2020population} real-time mobile phone data, transmission model
+
+\cite{Zhangeabb8001} contact and tracing data
+
+
+\cite{salje:pasteur-02548181} impact of lockdown in France
 	
 Data:
 
@@ -129,9 +199,17 @@ Data:
 
 
 
+\section{Scientometrics}
 
+\cite{Colavizza2020.04.20.046144} analysis of open corpus: too broad?
 
+\cite{khamsi2020coronavirus} AI within full-text
+
+% frontiers research topic (15/06)
+% https://www.frontiersin.org/research-topics/13652/coronavirus-research-landscape-resources-utilities-and-analytic-studies
 	
+% corpus 
+% https://www.semanticscholar.org/cord19/download
 	
 	
 	

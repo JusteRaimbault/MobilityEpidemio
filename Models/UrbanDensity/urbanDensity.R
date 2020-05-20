@@ -13,3 +13,8 @@ as.data.frame(cases %>% group_by(outcome) %>% summarize(count=n()))
 
 cases %>% group_by(country) %>% summarize(count=n())
 
+
+
+# distrib of urban form within a region vs dynamics of epidemics?
+# at the scale of urban areas, not enough localized data
+# which indicators? time of peak, doubling time. when finished, total deaths
