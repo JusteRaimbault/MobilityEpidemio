@@ -1,3 +1,6 @@
 [submodule "Docs/CASA"]
 	path = Docs/CASA-Covid-doc
 	url = git@github.com:JusteRaimbault/CASA-Covid-doc.git
+[submodule "Docs/Papers/MobilityEpidemio-paper"]
+	path = Docs/Papers/MobilityEpidemio-paper
+	url = git@github.com:JusteRaimbault/MobilityEpidemio-paper.git
